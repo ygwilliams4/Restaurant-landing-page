@@ -56,7 +56,7 @@ header{
     top: 15%;
 }
 .header-text h1{
-    font-size: 75px;
+    font-size: 85px;
     padding: 16px 0;
 }
 .header-text p:nth-child(2),
@@ -93,3 +93,100 @@ header{
         background: #fff;
     }
 }
+
+img{
+    max-width: 100%;
+}
+
+#dishes,
+#chefs,
+#order{
+    width:100%;
+    min-height:100vh;
+    text-align: center;
+    background-color: #080808;
+    padding: 16px;
+}
+#dishes > h2,
+#chefs > h2,
+#order > h2{
+    color: #ff0000;
+    padding: 16px 0;
+}
+
+#dishes .grid-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 16px;
+}
+#dishes .col{
+    padding: 16px;
+    text-align: left;
+    color: #b1b1b1;
+}
+#dishes .col button{
+    outline:none;
+    border: 1.5px solid #ff0000;
+    color: #ff0000;
+    background: transparent;
+    width: 150px;
+    height: 45px;
+    margin: 10px 0;
+}
+.price{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.price p:nth-child(1){
+    color: #c60000;
+    font-size: 20px;
+}
+.price p:nth-child(2){
+    color: #ff0000;
+    font-weight: bold;
+    font-size: 35px;
+}
+#chefs .grid-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 24px;
+    height: 400px;
+}
+#chefs .col{
+    border:2px solid red;
+    max-height: 100%;
+    display: flex;
+}
+.text{
+    background: #d3d3d3;
+    width: 50%;
+    text-align: right;
+    padding: 16px;
+}
+.text h3{
+    font-size: 30px;
+    padding: 16px 0;
+}
+.text h4{
+    font-size: 18px;
+}
+.text p{
+    padding: 16px 0;
+}
+
+#order .grid-container{
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    grid-gap: 16px;
+    height: 500px;
+}
+#order .col{
+    border: 2px solid red;
+}
+ footer{
+    text-align: center;
+    background-color: #080808;
+    padding: 16px;
+    color: #ff0000;
+ }
