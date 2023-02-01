@@ -1,2 +1,7 @@
 hamburger = document.querySelector(".hamburger");
-console.log(hamburger)
+hamburger.addEventListener(onclick, click);
+
+function click() {
+    navbar = document.querySelector(".nav-list");
+    navbar.toggleClassList("active");
+}

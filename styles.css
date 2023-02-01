@@ -30,6 +30,13 @@ nav{
     font-weight: bold;
     font-size: 18px;
 }
+.nav-link:hover{
+    cursor: pointer;
+    border-bottom: 2px solid #ff0000;
+    transform: translateY(-5px);
+    transition: all 0.4s ease-in;
+    font-size: 20px;
+}
 .logo{
     color:#fff;
     font-size: 25px;
@@ -48,6 +55,8 @@ header{
     background-image: url("img/header-bg.jpg");
     background-color: #00000086;
     background-blend-mode: multiply;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 .header-text{
     color: #fff;
@@ -74,8 +83,25 @@ header{
     height: 45px;
     margin: 16px 0;
 }
+.header-cta:hover{
+    cursor:pointer;
+    border: 3px groove #ffcdcd;
+    color: #ff2e2e;
+    transition: all 0.5s ease;
+}
 
 @media (max-width : 425px){
+    .header-text h1{
+        width: 60%;
+        font-size: 90px;
+        padding: 16px 0;
+    }
+    header{
+        height: fit-content;
+    }
+    #dishes .grid-container .col{
+        
+    }
     .nav-list{
         display:none;
     }
@@ -96,6 +122,7 @@ header{
 
 img{
     max-width: 100%;
+    height: 100%;
 }
 
 #dishes,
@@ -154,7 +181,6 @@ img{
     height: 400px;
 }
 #chefs .col{
-    border:2px solid red;
     max-height: 100%;
     display: flex;
 }
@@ -177,12 +203,72 @@ img{
 
 #order .grid-container{
     display: grid;
-    grid-template-columns: 1fr 3fr;
-    grid-gap: 16px;
+    grid-template-columns: 1fr 2fr;
     height: 500px;
 }
-#order .col{
-    border: 2px solid red;
+#order .grid-container div:nth-child(1){
+    background-image: url("/img/book\ a\ table.jpg");
+    background-size: cover;
+    background-position: center;
+}
+#order .grid-container div:nth-child(2){
+    padding: 36px 16px;
+    background: #696969;
+}
+form #name{
+    outline:none;
+    border: none;
+    padding: 16px 10px;
+    display: inline-block;
+    width: 49.2%;
+    margin: 10px 2px;
+    height: 50px;
+}
+form textarea{
+    width:100%;
+    padding: 16px;
+    margin:16px 0;
+    outline: none;
+    border:none;
+}
+.submitbtn{
+    width:100%;
+    border:none;
+    outline:none;
+    background-color: #c60000;
+    height:45px;
+    color: #ffffff;
+    cursor: pointer;
+}
+.submitbtn:hover{
+    color: #c60000;
+    background-color: #c5c5c5;
+    transition: all 0.6s ease;
+}
+.social-icons{
+    display: flex;
+    justify-content: space-evenly;
+    position: relative;
+    top: 20px;
+}
+.social-icons a{
+    color: #080808;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #b1b1b1;
+    margin: 10px;
+}
+.social-icons a:hover{
+    color: #e0e0e0;
+    cursor: pointer;
+    background-color: #080808;
+    transition: all 0.6s ease;
+    transform: translateY(-5px);
 }
  footer{
     text-align: center;
